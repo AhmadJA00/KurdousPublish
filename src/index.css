@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Rabar";
+  src: url("../public/Rabar_Font/Rabar_003.ttf");
+}
+
+.animation {
+  transform: scaleY(0);
+  animation: scaleIn 0.3s forwards;
+  transform-origin: top;
+}
+
+@keyframes scaleIn {
+  to {
+    transform: scaleY(1);
+  }
+}
+.animationMobile {
+  transform: scaleX(0);
+  animation: scaleIn 0.4s forwards;
+  transform-origin: right;
+}
+
+@keyframes scaleIn {
+  to {
+    transform: scaleY(1);
+  }
+}
+
+input[type="range"] {
+  direction: ltr; /* Ensures left-to-right direction */
+}
