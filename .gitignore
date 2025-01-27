@@ -2,6 +2,5 @@
 node_modules/
 
 # Ignore public build output
-public/
 
 .vscode/
