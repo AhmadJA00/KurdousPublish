@@ -6,9 +6,9 @@ import ArcticFox from "../assets/images/ArcticFox.webp"
 import ArcticSquirrel from "../assets/images/ArcticSquirrel.jpeg"
 
 // Videos
-import ArcticFoxSubtitle from "/videos/ArcticFoxSubtitle.mp4"
-import FennecFoxSubtitles from "/videos/FennecFoxSubtitle.mp4"
-import ArcticSquirrelSubtitle from "/videos/ArcticSquirrelSubtitle.mp4"
+import ArcticFoxSubtitle from "https://drive.google.com/file/d/1aCZaPNAV9ZdGUJN6xCnP_IAY9_JOgbwt/view"
+import FennecFoxSubtitles from "https://drive.google.com/file/d/1bDjM__QaWPXcrIJ97kKceS_u65dlVPx6/view"
+import ArcticSquirrelSubtitle from "https://drive.google.com/file/d/1IzwFxKnIa9EfvGxmjQMJxIROoVDOZ4nh/view"
 
 export const Documetaries = [
   { 

@@ -1,6 +1,6 @@
-import FennecFox from "/videos/FennecFox.mp4";
-import ArcticFox from "/videos/ArcticFox.mp4";
-import ArcticSquirrel from "/videos/ArcticSquirrel.mp4"
+import FennecFox from "https://drive.google.com/file/d/1kiXddlxA6uVgutGEeXaVsi0TLhO0o43J/view";
+import ArcticFox from "https://drive.google.com/file/d/13DivESuR-mQiUG25Tj8XE74o0hbV1mP8/view";
+import ArcticSquirrel from "https://drive.google.com/file/d/13ifMxrbwhmYmhvUmq4_EoxMCBdu3CZPD/view"
 
 
 export const videosList = [
