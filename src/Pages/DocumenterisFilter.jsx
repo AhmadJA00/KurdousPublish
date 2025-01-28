@@ -1,8 +1,26 @@
 import React, { useState } from "react";
 import { Link, useLocation, useSearchParams } from "react-router-dom";
 import { RiArrowDropDownLine } from "react-icons/ri";
-import { Documetaries } from "../Data/data";
-import { dropdownData } from "../Data/data";
+import { documetaries } from "../data/documetaries";
+
+export const dropdownData = [
+  {
+    id: 1,
+    name: "جۆری دۆکیۆمێنتاری",
+    dropdown: [
+      {
+        id: 1,
+        name: "هەموو",
+        category: null,
+      },
+      {
+        id: 2,
+        name: "ژیانی ئاژەڵە کێوییەکان",
+        category: "ژیانی ئاژەڵە کێوییەکان",
+      },
+    ],
+  },
+];
 
 const DocumenterisFilter = ({ isDarkMode }) => {
   const location = useLocation();
@@ -12,7 +30,7 @@ const DocumenterisFilter = ({ isDarkMode }) => {
   const [selectedCategory, setSelectedCategory] = useState(null); // Track selected category
   const [currentPage, setCurrentPage] = useState(1);
   const recordsPerPage = 15;
-  const [data, setData] = React.useState(Documetaries);
+  const [data, setData] = React.useState(documetaries);
 
   const totalPages = Math.ceil(data.length / recordsPerPage);
 
@@ -33,9 +51,9 @@ const DocumenterisFilter = ({ isDarkMode }) => {
   const filteredDocs = (type) => {
     let tempDoc;
     if (type) {
-      tempDoc = Documetaries.filter((doc) => doc.category === type);
+      tempDoc = documetaries.filter((doc) => doc.category === type);
     } else {
-      tempDoc = Documetaries;
+      tempDoc = documetaries;
     }
     setData(tempDoc);
   };

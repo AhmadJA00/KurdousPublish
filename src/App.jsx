@@ -14,7 +14,7 @@ import TranslatorsPages from "./Pages/TranslatorsPages";
 import TranslatorDescription from "./Pages/TranslatorDescription";
 import Description from "./Pages/Description";
 import AnimailVideo from "./Pages/AnimailVideo";
-import RootLayout from "./Layout.jsx/RootLayout";
+import MainLayout from "./Layout/MainLayout";
 
 const App = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -31,7 +31,7 @@ const App = () => {
       <Route
         path="/"
         element={
-          <RootLayout isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
+          <MainLayout isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
         }
       >
         <Route

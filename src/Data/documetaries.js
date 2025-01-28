@@ -1,25 +1,24 @@
-
-
-// Images 
-import FennecFox from "../assets/images/FennecFox.webp"
-import ArcticFox from "../assets/images/ArcticFox.webp"
-import ArcticSquirrel from "../assets/images/ArcticSquirrel.jpeg"
+// Images
+import FennecFox from "../assets/images/FennecFox.webp";
+import ArcticFox from "../assets/images/ArcticFox.webp";
+import ArcticSquirrel from "../assets/images/ArcticSquirrel.jpeg";
 
 // Videos
-import ArcticFoxSubtitle from "https://drive.google.com/file/d/1aCZaPNAV9ZdGUJN6xCnP_IAY9_JOgbwt/view"
-import FennecFoxSubtitles from "https://drive.google.com/file/d/1bDjM__QaWPXcrIJ97kKceS_u65dlVPx6/view"
-import ArcticSquirrelSubtitle from "https://drive.google.com/file/d/1IzwFxKnIa9EfvGxmjQMJxIROoVDOZ4nh/view"
+// import ArcticFoxSubtitle from "https://drive.google.com/file/d/1aCZaPNAV9ZdGUJN6xCnP_IAY9_JOgbwt/view";
+// import FennecFoxSubtitles from "https://drive.google.com/file/d/1bDjM__QaWPXcrIJ97kKceS_u65dlVPx6/view";
+// import ArcticSquirrelSubtitle from "https://drive.google.com/file/d/1IzwFxKnIa9EfvGxmjQMJxIROoVDOZ4nh/view";
 
-export const Documetaries = [
-  { 
-    id: 1, 
-    title: "Fennec Fox", 
+export const documetaries = [
+  {
+    id: 1,
+    title: "Fennec Fox",
     description:
-    "بچووکترین ڕێوەیە لەجیهاندا لەبیابانەکانی باکوری ئەفریقیا و هەندێك ناوچەی باکوری سعودیا دەژیت. ئەم ئاژەڵە لەکەشی کەم ئاوی و بێ ئاوی ڕاهاتووە، ژیانێکی هەمەچەشنیان هەیە.",
-    name:"ڕێوی  فێنێک", 
-    img: FennecFox, 
+      "بچووکترین ڕێوەیە لەجیهاندا لەبیابانەکانی باکوری ئەفریقیا و هەندێك ناوچەی باکوری سعودیا دەژیت. ئەم ئاژەڵە لەکەشی کەم ئاوی و بێ ئاوی ڕاهاتووە، ژیانێکی هەمەچەشنیان هەیە.",
+    name: "ڕێوی  فێنێک",
+    img: FennecFox,
     category: "ژیانی ئاژەڵە کێوییەکان",
-    linkVideo: FennecFoxSubtitles,
+    linkVideo: "https://streamable.com/nwzij1?src=player-page-share", // Streaming URL
+
     btn: "بینینی ڤیدیۆ",
     metadata: [
       { label: "زمان", value: "ئینگلیزی" },
@@ -29,15 +28,16 @@ export const Documetaries = [
       { label: "ماوە", value: "٣.٤٥ خولەک" },
     ],
   },
-  { 
-    id: 2, 
+  {
+    id: 2,
     title: "Arctic Fox",
     description:
       "ئەڕکتیک ڕێوە دەژیت لە ناوچەی زەویێکی سارد و ڕەشەکانی زەوی. ئەم ڕێوەیە ژیانێکی تایبەتییان هەیە بۆ گەیشتنی گەرمیدا.",
-    name:"ڕێوی جەمسەری باکوور", 
-    img: ArcticFox,    
+    name: "ڕێوی جەمسەری باکوور",
+    img: ArcticFox,
     category: "ژیانی ئاژەڵە کێوییەکان",
-    linkVideo:  ArcticFoxSubtitle,
+    linkVideo:
+      "https://drive.google.com/uc?export=view&id=1bDjM__QaWPXcrIJ97kKceS_u65dlVPx6", // Streaming URL
     btn: "بینینی ڤیدیۆ",
     metadata: [
       { label: "زمان", value: "ئینگلیزی" },
@@ -47,15 +47,16 @@ export const Documetaries = [
       { label: "ماوە", value: "٢.٥٤ خولەک" },
     ],
   },
-  { 
-    id: 3, 
+  {
+    id: 3,
     title: "Arctic Squirrel",
     description:
       "کۆترە زەمینیەکانی جەمسەری باکوور گەورەترین جۆری کۆترە زەمینیەکانی ئەمریکای باکوورە، کێشیان لە نێوان ٥٢٤ بۆ ١٥٠٠ گرامە، درێژییەکەی ٣٣٢ بۆ ٤٩٥ ملم. گۆڕانی وەرزی لە بارستەی جەستەیان بەسەردا دێت و لە کاتی خەوی زستانەدا کێشیان دادەبەزێت.",
-    name:"Arctic Squirrel", 
-    img: ArcticSquirrel,    
+    name: "Arctic Squirrel",
+    img: ArcticSquirrel,
     category: "ژیانی ئاژەڵە کێوییەکان",
-    linkVideo:  ArcticSquirrelSubtitle,
+    linkVideo:
+      "https://drive.google.com/uc?export=view&id=1IzwFxKnIa9EfvGxmjQMJxIROoVDOZ4nh", // Streaming URL
     btn: "بینینی ڤیدیۆ",
     metadata: [
       { label: "زمان", value: "ئینگلیزی" },
@@ -63,46 +64,6 @@ export const Documetaries = [
       { label: "پێداچوونەوە", value: "جهاد عبدالرحمن - شیلان عمر" },
       { label: "تەکنیکار", value: "محمود هونەر" },
       { label: "ماوە", value: "٢.٥٤ خولەک" },
-    ],
-  },
-
-]
-
-
-
-// Navbar dropdown 
-export const NavLinks = [
-  { id: 1, name: "سەرەکی", link: "/", isActive: false },
-  {
-    id: 2,
-    name: "دۆکیۆمێنتارییەکان",
-    link: "/DocumenterisFilter",
-    isActive: false,
-    submenu: [
-      { id: 1, name: "ژیانی ئاژەڵە کێوییەکان" ,link:'/DocumenterisFilter?type=ژیانی ئاژەڵە کێوییەکان'},
-    ],
-  },
-  { id: 3, name: "وەرگێڕەکان", link: "/TranslatorsPages", isActive: false },
-];
-
-// DocumentaryFiltering dropdown
-export const dropdownData = [
-  {
-    id: 1,
-    name: "جۆری دۆکیۆمێنتاری",
-    dropdown: [
-      {
-        id: 1,
-        name: "هەموو",
-        category: null,
-      },
-      {
-        id: 2,
-        name: "ژیانی ئاژەڵە کێوییەکان",
-        category: "ژیانی ئاژەڵە کێوییەکان",
-      },
-
- 
     ],
   },
 ];

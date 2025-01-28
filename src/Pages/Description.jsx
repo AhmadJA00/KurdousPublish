@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { FaChevronRight } from "react-icons/fa";
-import { Documetaries } from "../Data/data";
+import { documetaries } from "../data/documetaries";
 
 const Description = ({ isDarkMode }) => {
   const [openSubmenu, setOpenSubmenu] = useState(false);
   const { id } = useParams();
 
-  const video = Documetaries.find((video) => video.id === parseInt(id));
+  const video = documetaries.find((video) => video.id === parseInt(id));
 
   const getBackgroundOpacity = () => {
     return openSubmenu ? "bg-opacity-50" : "bg-opacity-100";

@@ -5,8 +5,24 @@ import logo_dark_mode from "../assets/images/dark_logo.png";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { HiMenuAlt2, HiMenuAlt3 } from "react-icons/hi";
 import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
-import { NavLinks } from "../Data/data";
-
+// Navbar dropdown
+export const NavLinks = [
+  { id: 1, name: "سەرەکی", link: "/", isActive: false },
+  {
+    id: 2,
+    name: "دۆکیۆمێنتارییەکان",
+    link: "/DocumenterisFilter",
+    isActive: false,
+    submenu: [
+      {
+        id: 1,
+        name: "ژیانی ئاژەڵە کێوییەکان",
+        link: "/DocumenterisFilter?type=ژیانی ئاژەڵە کێوییەکان",
+      },
+    ],
+  },
+  { id: 3, name: "وەرگێڕەکان", link: "/TranslatorsPages", isActive: false },
+];
 const Navbar = ({ isDarkMode, toggleTheme }) => {
   const [showNavbar, setShowNavbar] = useState(false);
   const toggleNav = () => setShowNavbar(!showNavbar);

@@ -9,12 +9,11 @@ import {
 } from "react-icons/md";
 import { HiOutlineVolumeUp, HiOutlineVolumeOff } from "react-icons/hi";
 import { useParams } from "react-router-dom";
-
-import { Documetaries } from "../Data/data";
+import { documetaries } from "../data/documetaries";
 
 const AnimailVideo = ({ isDarkMode }) => {
   const { id } = useParams(); // Retrieve the video ID from the URL
-  const video = Documetaries.find((video) => video.id === parseInt(id)); // Use the video ID to find the video
+  const video = documetaries.find((video) => video.id === parseInt(id)); // Use the video ID to find the video
 
   const [isPlaying, setIsPlaying] = useState(false);
   const [volume, setVolume] = useState(0.5);
@@ -115,6 +114,7 @@ const AnimailVideo = ({ isDarkMode }) => {
             width="1000px"
             onTimeUpdate={handleProgressUpdate}
           ></video>
+
           <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent py-4 px-2">
             <div
               className="video-timeline w-full h-2 cursor-pointer relative"

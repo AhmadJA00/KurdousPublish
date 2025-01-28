@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Documetaries } from "../Data/data";
+import { documetaries } from "../data/documetaries";
 
 const Documentaries = ({ isDarkMode }) => {
   return (
@@ -19,7 +19,7 @@ const Documentaries = ({ isDarkMode }) => {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-4 w-full">
-          {Documetaries.map(({ id, name, img }) => (
+          {documetaries.map(({ id, name, img }) => (
             <Link to={`/Description/${id}`} key={id}>
               <div className="group relative h-[300px] md:h-[400px] cursor-pointer overflow-hidden flex justify-center items-center rounded-md w-full">
                 <div>
