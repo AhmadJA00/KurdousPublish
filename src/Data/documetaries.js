@@ -3,10 +3,14 @@ import FennecFox from "../assets/images/FennecFox.webp";
 import ArcticFox from "../assets/images/ArcticFox.webp";
 import ArcticSquirrel from "../assets/images/ArcticSquirrel.jpeg";
 
+import v1 from "../assets/videos/1.mp4";
+import v2 from "../assets/videos/2.mp4";
+import v3 from "../assets/videos/3.mp4";
+
 // Videos
 // import ArcticFoxSubtitle from "https://drive.google.com/file/d/1aCZaPNAV9ZdGUJN6xCnP_IAY9_JOgbwt/view";
-// import FennecFoxSubtitles from "https://drive.google.com/file/d/1bDjM__QaWPXcrIJ97kKceS_u65dlVPx6/view";
-// import ArcticSquirrelSubtitle from "https://drive.google.com/file/d/1IzwFxKnIa9EfvGxmjQMJxIROoVDOZ4nh/view";
+// import FennecFoxSubtitles from ;
+// import ArcticSquirrelSubtitle from ;
 
 export const documetaries = [
   {
@@ -17,7 +21,7 @@ export const documetaries = [
     name: "ڕێوی  فێنێک",
     img: FennecFox,
     category: "ژیانی ئاژەڵە کێوییەکان",
-    linkVideo: "https://streamable.com/nwzij1?src=player-page-share", // Streaming URL
+    linkVideo: v1, // Streaming URL
 
     btn: "بینینی ڤیدیۆ",
     metadata: [
@@ -36,8 +40,7 @@ export const documetaries = [
     name: "ڕێوی جەمسەری باکوور",
     img: ArcticFox,
     category: "ژیانی ئاژەڵە کێوییەکان",
-    linkVideo:
-      "https://drive.google.com/uc?export=view&id=1bDjM__QaWPXcrIJ97kKceS_u65dlVPx6", // Streaming URL
+    linkVideo: v2, // Streaming URL
     btn: "بینینی ڤیدیۆ",
     metadata: [
       { label: "زمان", value: "ئینگلیزی" },
@@ -55,8 +58,7 @@ export const documetaries = [
     name: "Arctic Squirrel",
     img: ArcticSquirrel,
     category: "ژیانی ئاژەڵە کێوییەکان",
-    linkVideo:
-      "https://drive.google.com/uc?export=view&id=1IzwFxKnIa9EfvGxmjQMJxIROoVDOZ4nh", // Streaming URL
+    linkVideo: v3,
     btn: "بینینی ڤیدیۆ",
     metadata: [
       { label: "زمان", value: "ئینگلیزی" },

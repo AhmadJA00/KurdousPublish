@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-// import { videosList } from "../Data/Hero";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 import AOS from "aos";
+import { videosList } from "../Data/Hero";
 
 const Hero = ({ isDarkMode, toggleTheme }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
