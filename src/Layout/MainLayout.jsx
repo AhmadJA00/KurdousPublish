@@ -6,8 +6,8 @@ const MainLayout = ({ isDarkMode, toggleTheme }) => {
   return (
     <div>
       <Navbar isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
-      <Outlet isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
-      <Footer isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
+      <Outlet isDarkMode={isDarkMode} />
+      <Footer isDarkMode={isDarkMode} />
     </div>
   );
 };

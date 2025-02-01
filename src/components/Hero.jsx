@@ -4,7 +4,7 @@ import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 import AOS from "aos";
 import { videosList } from "../data/Hero";
 
-const Hero = ({ isDarkMode, toggleTheme }) => {
+const Hero = ({ isDarkMode }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // Function to move to the next video
