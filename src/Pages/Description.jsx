@@ -22,7 +22,7 @@ const Description = ({ isDarkMode }) => {
       }`}
     >
       <div className="flex flex-col lg:flex-row mt-1 xl:mt-10 items-center lg:py-20">
-        <div className="flex-shrink-0 md:w-1/2 lg:w-2/5 mt-10 md:mt-14 lg:mt-1">
+        <div className="flex-shrink-0 md:w-1/2 lg:w-1/5 mt-10 md:mt-14 lg:mt-1">
           <img
             src={video.img}
             className="w-full rounded-md h-96 object-cover"

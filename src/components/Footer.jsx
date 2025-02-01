@@ -1,6 +1,6 @@
 import React from "react";
 import logo_light_mode from "../assets/images/light_logo.png";
-import logo_dark_mode from "../assets/images/dark_logo.png";//Helo word
+import logo_dark_mode from "../assets/images/dark_logo.png"; //Helo word
 
 const Footer = ({ isDarkMode }) => {
   return (
@@ -21,7 +21,7 @@ const Footer = ({ isDarkMode }) => {
           className="h-20 w-28 md:h-24 md:w-36 object-cover"
         />
         <h1 className="font-medium text-center md:text-start">
-          کوردوس یەکەمین ماڵپەڕەی تایبەتە بە فیلمی دۆکیۆمێنتاری بە ژێرنووسی
+          کوردوش یەکەمین ماڵپەڕەی تایبەتە بە فیلمی دۆکیۆمێنتاری بە ژێرنووسی
           کوردی، هەواڵ و تێڕوانین بۆ ژیانی ئاژەڵان و فیلمی دیکۆمێنتاری پێشکەش
           دەکات
         </h1>

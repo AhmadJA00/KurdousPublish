@@ -1,4 +1,3 @@
-
 // Images
 import FennecFox from "../assets/images/FennecFox.webp";
 import ArcticFox from "../assets/images/ArcticFox.webp";
@@ -23,7 +22,6 @@ export const documetaries = [
     metadata: [
       { label: "زمان", value: "ئینگلیزی" },
       { label: "وەرگێڕ", value: "شەن کامیل" },
-      { label: "پێداچوونەوە", value: "جهاد عبدالرحمن - شیلان عمر" },
       { label: "تەکنیکار", value: "محمود هونەر" },
       { label: "ماوە", value: "٣.٤٥ خولەک" },
     ],
@@ -40,8 +38,7 @@ export const documetaries = [
     btn: "بینینی ڤیدیۆ",
     metadata: [
       { label: "زمان", value: "ئینگلیزی" },
-      { label: "وەرگێڕ", value: "شەن کامیل" },
-      { label: "پێداچوونەوە", value: "جهاد عبدالرحمن - شیلان عمر" },
+      { label: "وەرگێڕ", value: "شیلان عمر احمد" },
       { label: "تەکنیکار", value: "محمود هونەر" },
       { label: "ماوە", value: "٢.٥٤ خولەک" },
     ],
@@ -58,8 +55,7 @@ export const documetaries = [
     btn: "بینینی ڤیدیۆ",
     metadata: [
       { label: "زمان", value: "ئینگلیزی" },
-      { label: "وەرگێڕ", value: "شەن کامیل" },
-      { label: "پێداچوونەوە", value: "جهاد عبدالرحمن - شیلان عمر" },
+      { label: "وەرگێڕ", value: "بارانی سعید جرجیس" },
       { label: "تەکنیکار", value: "محمود هونەر" },
       { label: "ماوە", value: "٢.٥٤ خولەک" },
     ],
