@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
-import { translatorsList } from "../data/translator";
+import { translatorsList } from "../data/Translators.js";
 
 const TranslatorDescription = ({ isDarkMode }) => {
   const { id } = useParams(); // Get the translator ID from the URL

@@ -9,7 +9,7 @@ import {
 } from "react-icons/md";
 import { HiOutlineVolumeUp, HiOutlineVolumeOff } from "react-icons/hi";
 import { useParams } from "react-router-dom";
-import { documetaries } from "../data/documetaries";
+import { documetaries } from "../data/Documetaries.js";
 
 const AnimailVideo = ({ isDarkMode }) => {
   const { id } = useParams(); // Retrieve the video ID from the URL

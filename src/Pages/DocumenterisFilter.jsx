@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useLocation, useSearchParams } from "react-router-dom";
 import { RiArrowDropDownLine } from "react-icons/ri";
-import { documetaries } from "../data/documetaries";
+import { documetaries } from "../data/Documetaries.js";
 
 export const dropdownData = [
   {

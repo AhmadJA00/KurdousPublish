@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { documetaries } from "../data/documetaries";
+import { documetaries } from "../data/Documetaries.js";
 
 const Documentaries = ({ isDarkMode }) => {
   return (

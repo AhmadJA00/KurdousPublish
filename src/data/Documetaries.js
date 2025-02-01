@@ -1,3 +1,4 @@
+
 // Images
 import FennecFox from "../assets/images/FennecFox.webp";
 import ArcticFox from "../assets/images/ArcticFox.webp";

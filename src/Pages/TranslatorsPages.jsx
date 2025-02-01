@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { translatorsList } from "../data/translator";
+import { translatorsList } from "../data/Translators.js";
 
 const TranslatorsPages = ({ isDarkMode }) => {
   return (

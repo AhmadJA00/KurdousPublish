@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { FaChevronRight } from "react-icons/fa";
-import { documetaries } from "../data/documetaries";
+import { documetaries } from "../data/Documetaries.js";
 
 const Description = ({ isDarkMode }) => {
   const [openSubmenu, setOpenSubmenu] = useState(false);
