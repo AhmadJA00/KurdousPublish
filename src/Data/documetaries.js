@@ -7,11 +7,6 @@ import v1 from "../assets/videos/1.mp4";
 import v2 from "../assets/videos/2.mp4";
 import v3 from "../assets/videos/3.mp4";
 
-// Videos
-// import ArcticFoxSubtitle from "https://drive.google.com/file/d/1aCZaPNAV9ZdGUJN6xCnP_IAY9_JOgbwt/view";
-// import FennecFoxSubtitles from ;
-// import ArcticSquirrelSubtitle from ;
-
 export const documetaries = [
   {
     id: 1,
