@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo_light_mode from "../assets/images/light_logo.png";
 import logo_dark_mode from "../assets/images/dark_logo.png";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { HiMenuAlt2, HiMenuAlt3 } from "react-icons/hi";
 import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
-// Navbar dropdown
+
 export const NavLinks = [
   { id: 1, name: "سەرەکی", link: "/", isActive: false },
   {
@@ -23,22 +23,36 @@ export const NavLinks = [
   },
   { id: 3, name: "وەرگێڕەکان", link: "/TranslatorsPages", isActive: false },
 ];
-const Navbar = ({ isDarkMode, toggleTheme }) => {
+
+const Navbar = () => {
+  const [isDarkMode, setIsDarkMode] = useState(false);
   const [showNavbar, setShowNavbar] = useState(false);
+  const [openSubmenu, setOpenSubmenu] = useState(false);
+
   const toggleNav = () => setShowNavbar(!showNavbar);
+
+  useEffect(() => {
+    const darkMode = localStorage.getItem("theme");
+    setIsDarkMode(darkMode === "dark");
+    document.body.classList.toggle("dark", darkMode === "dark");
+  }, []);
+
+  const toggleTheme = () => {
+    const newTheme = !isDarkMode ? "dark" : "light";
+    localStorage.setItem("theme", newTheme);
+    setIsDarkMode(!isDarkMode);
+    document.body.classList.toggle("dark", !isDarkMode); // Update body class
+  };
 
   const location = useLocation();
   const currentPath = location.pathname;
+
   const getNavbarOpacity = () => {
     return currentPath === "/" && !openSubmenu
       ? `bg-opacity-100 lg:bg-opacity-60 `
       : ` border-b-[1px] rounded-xl `;
   };
 
-  const [openSubmenu, setOpenSubmenu] = useState(false);
-  const toggleSubmenu = (id) => {
-    setOpenSubmenu(openSubmenu === id ? false : id);
-  };
   return (
     <section className="flex items-center justify-center ">
       <div
@@ -46,12 +60,12 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
           isDarkMode
             ? `bg-dark-primary text-dark-secondary`
             : `bg-light-primary text-light-secondary`
-        } flex  justify-center items-center ${
+        } flex justify-center items-center ${
           showNavbar ? "rounded-3xl" : "rounded-full"
-        }  w-11/12 top-5 absolute z-10 `}
+        } w-11/12 top-5 absolute z-10 `}
       >
-        <div className={`container py-2 md:py-0 z-20`}>
-          <div className={`flex px-5 justify-between items-stretch`}>
+        <div className="container py-2 md:py-0 z-20">
+          <div className="flex px-5 justify-between items-stretch">
             <img
               src={isDarkMode ? logo_dark_mode : logo_light_mode}
               className=" h-20 w-28 md:h-24 md:w-36 object-cover"
@@ -65,7 +79,7 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
                   <div className="flex justify-center px-3 items-center ">
                     <Link
                       to={link}
-                      className={`flex-col justify-between items-center${
+                      className={`flex-col justify-between items-center ${
                         isDarkMode ? "text-light-primary" : "text-dark-primary"
                       } relative cursor-pointer after:content-[''] ${
                         isDarkMode
@@ -78,19 +92,19 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
                     {submenu && (
                       <div className="flex w-full ">
                         <button
-                          onClick={() => toggleSubmenu(id)}
-                          className="pr-1 text-xl  transition-transform duration-300 group-hover:rotate-180 "
+                          onClick={() =>
+                            setOpenSubmenu(openSubmenu === id ? false : id)
+                          }
+                          className="pr-1 text-xl transition-transform duration-300 group-hover:rotate-180 "
                         >
                           <RiArrowDropDownLine />
                         </button>
                         <ul
-                          className={`animation ${getNavbarOpacity()} hidden group-hover:flex flex-col justify-between  absolute top-[96px] w-40 right-0 rounded-3xl rounded-t-none 
-                         ${
-                           isDarkMode
-                             ? "bg-dark-primary text-dark-secondary "
-                             : "bg-light-primary text-light-secondary "
-                         }
-                           duration-200`}
+                          className={`animation ${getNavbarOpacity()} hidden group-hover:flex flex-col justify-between  absolute top-[96px] w-40 right-0 rounded-3xl rounded-t-none ${
+                            isDarkMode
+                              ? "bg-dark-primary text-dark-secondary "
+                              : "bg-light-primary text-light-secondary "
+                          } duration-200`}
                         >
                           {submenu.map(({ id, name, link }) => (
                             <li key={id}>
@@ -138,13 +152,13 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
 
             {/* Mobile Navbar */}
             <div
-              className={`  ${getNavbarOpacity()} md:hidden border-none flex items-center gap-4 z-30`}
+              className={`${getNavbarOpacity()} md:hidden border-none flex items-center gap-4 z-30`}
             >
               <div>
                 {!showNavbar ? (
                   <HiMenuAlt2
                     onClick={toggleNav}
-                    className={` cursor-pointer ${
+                    className={`cursor-pointer ${
                       isDarkMode
                         ? "text-dark-secondary"
                         : "text-light-secondary"
@@ -154,7 +168,7 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
                 ) : (
                   <HiMenuAlt3
                     onClick={toggleNav}
-                    className={`  cursor-pointer ${
+                    className={`cursor-pointer ${
                       isDarkMode
                         ? "text-dark-secondary"
                         : "text-light-secondary"
@@ -185,20 +199,18 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
           {/* Mobile Navbar Menu */}
           {showNavbar && (
             <div
-              className={`  ${getNavbarOpacity()} relative top-0 left-0 w-full  ${
+              className={`${getNavbarOpacity()} relative top-0 left-0 w-full ${
                 isDarkMode ? "bg-dark-primary " : "bg-light-primary"
-              } `}
+              }`}
             >
               <ul
-                className={`flex flex-col items-start gap-4 p-4 min-h-screen `}
+                className={`flex flex-col items-start gap-4 p-4 min-h-screen`}
               >
                 {NavLinks.map(({ id, name, link, submenu }) => (
                   <li
                     key={id}
-                    className={` py-2 font-semibold w-full`}
+                    className={`py-2 font-semibold w-full`}
                     onClick={() => setShowNavbar(false)}
-                    onMouseEnter={() => toggleSubmenu(id)}
-                    onMouseLeave={() => toggleSubmenu(null)}
                   >
                     <div
                       className={`flex items-center animationMobile ${
@@ -207,7 +219,7 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
                     >
                       <Link
                         to={link}
-                        className={`group  ${
+                        className={`group ${
                           isDarkMode
                             ? "text-light-primary"
                             : "text-dark-primary"
@@ -229,7 +241,7 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
                     </div>
                     {submenu && openSubmenu === id && (
                       <ul
-                        className={`w-full mt-4 absolute${
+                        className={`w-full mt-4 absolute ${
                           isDarkMode ? "bg-dark-primary " : "bg-light-primary "
                         }`}
                       >
@@ -239,11 +251,11 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
                               to={link}
                               key={id}
                               onClick={() => setShowNavbar(false)}
-                              className={`flex-col justify-between items-center${
+                              className={`flex-col justify-between items-center ${
                                 isDarkMode
                                   ? "text-light-primary"
                                   : "text-dark-primary"
-                              }  `}
+                              }`}
                             >
                               {name}
                             </Link>

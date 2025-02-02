@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
-import AOS from "aos";
 import { videosList } from "../data/Hero";
 
-const Hero = ({ isDarkMode }) => {
+const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // Function to move to the next video
@@ -29,7 +28,7 @@ const Hero = ({ isDarkMode }) => {
 
   return (
     <div className="relative w-full h-screen overflow-hidden z-0">
-      {videosList.map(({ id, vid, title, description, btn, link }, index) => (
+      {videosList.map(({ id, vid, title, description, btn }, index) => (
         <div
           key={id}
           className={`absolute inset-0 transition-opacity duration-1000 ${
@@ -70,16 +69,7 @@ const Hero = ({ isDarkMode }) => {
       <div className="hidden lg:block absolute top-1/2 left-20 transform -translate-y-1/2 z-20">
         <button
           onClick={prevVideo}
-          className={`xl:p-3 p-2 xl:text-xl rounded-full ${
-            isDarkMode
-              ? "bg-dark-primary text-dark-secondary"
-              : "bg-light-primary text-light-secondary"
-          }`}
-          style={{
-            backgroundColor: isDarkMode
-              ? "rgba(14, 32, 54, 0.8)"
-              : "rgba(207, 207, 207, 0.8)",
-          }}
+          className="xl:p-3 p-2 xl:text-xl rounded-full bg-light-primary text-light-secondary bg-opacity-50 dark:bg-dark-primary dark:text-dark-secondary dark:bg-opacity-50"
         >
           <FaChevronLeft />
         </button>
@@ -87,15 +77,10 @@ const Hero = ({ isDarkMode }) => {
       <div className="hidden lg:block absolute top-1/2 right-20 transform -translate-y-1/2 z-20">
         <button
           onClick={nextVideo}
-          className={`xl:p-3 p-2 xl:text-xl  rounded-full ${
-            isDarkMode
-              ? "bg-dark-primary text-dark-secondary"
-              : "bg-light-primary text-light-secondary"
-          }`}
+          className="xl:p-3 p-2 xl:text-xl  rounded-full bg-light-primary text-light-secondary dark:bg-dark-primary dark:text-dark-secondary "
           style={{
-            backgroundColor: isDarkMode
-              ? "rgba(14, 32, 54, 0.8)"
-              : "rgba(207, 207, 207, 0.8)",
+            backgroundColor:
+              "rgba(207, 207, 207, 0.8) dark:rgba(14, 32, 54, 0.8) ",
           }}
         >
           <FaChevronRight />

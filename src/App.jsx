@@ -17,74 +17,36 @@ import AnimailVideo from "./Pages/AnimailVideo";
 import MainLayout from "./Layout/MainLayout";
 
 const App = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
-  const toggleTheme = () => {
-    setIsDarkMode((prev) => {
-      const newMode = !prev;
-      document.body.classList.toggle("dark", newMode);
-      return newMode;
-    });
-  };
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route
-        path="/"
-        element={
-          <MainLayout isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
-        }
-      >
+      <Route path="/" element={<MainLayout />}>
         <Route
           index
           element={
             <>
-              <Hero isDarkMode={isDarkMode} />
-              <Documentaries isDarkMode={isDarkMode} />
-              <Translators isDarkMode={isDarkMode} />
+              <Hero />
+              <Documentaries />
+              <Translators />
             </>
           }
         />
-        <Route
-          path="documentaries"
-          element={<Documentaries isDarkMode={isDarkMode} />}
-        />
+        <Route path="documentaries" element={<Documentaries />} />
 
-        <Route
-          path="DocumenterisFilter"
-          element={<DocumenterisFilter isDarkMode={isDarkMode} />}
-        />
+        <Route path="DocumenterisFilter" element={<DocumenterisFilter />} />
 
-        <Route
-          path="translators"
-          element={<Translators isDarkMode={isDarkMode} />}
-        />
-        <Route
-          path="TranslatorsPages"
-          element={<TranslatorsPages isDarkMode={isDarkMode} />}
-        />
+        <Route path="translators" element={<Translators />} />
+        <Route path="TranslatorsPages" element={<TranslatorsPages />} />
         <Route
           path="TranslatorDescription/:id"
-          element={<TranslatorDescription isDarkMode={isDarkMode} />}
+          element={<TranslatorDescription />}
         />
-        <Route
-          path="Description/:id"
-          element={<Description isDarkMode={isDarkMode} />}
-        />
+        <Route path="Description/:id" element={<Description />} />
 
-        <Route
-          path="AnimailVideo/:id"
-          element={<AnimailVideo isDarkMode={isDarkMode} />}
-        />
+        <Route path="AnimailVideo/:id" element={<AnimailVideo />} />
       </Route>
     )
   );
-  return (
-    <RouterProvider
-      router={router}
-      isDarkMode={isDarkMode}
-      toggleTheme={toggleTheme}
-    />
-  );
+  return <RouterProvider router={router} />;
 };
 
 export default App;

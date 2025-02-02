@@ -22,7 +22,7 @@ export const dropdownData = [
   },
 ];
 
-const DocumenterisFilter = ({ isDarkMode }) => {
+const DocumenterisFilter = () => {
   const location = useLocation();
 
   const [searchParams, setSearchParams] = useSearchParams(); // ? AHMED'S CODE
@@ -71,11 +71,7 @@ const DocumenterisFilter = ({ isDarkMode }) => {
 
   return (
     <section
-      className={`px-2 md:px-8 pt-28 lg:pt-36  ${
-        isDarkMode
-          ? "bg-dark-primary text-dark-secondary"
-          : "bg-light-primary text-light-secondary"
-      }`}
+      className={`px-2 md:px-8 pt-28 lg:pt-36 bg-light-primary text-light-secondary dark:bg-dark-primary dark:text-dark-secondary`}
     >
       <div className="flex flex-col justify-around gap-8 lg:gap-12 px-5 ">
         {/* Header */}
@@ -87,13 +83,8 @@ const DocumenterisFilter = ({ isDarkMode }) => {
             {dropdownData.map(({ id, name, dropdown }) => (
               <div key={id} className="inline-block text-right relative">
                 <button
-                  className={`flex  items-center text-sm md:text-base justify-between gap-2 px-2 md:px-4 py-1 md:py-2 pb-2 md:pb-3 ${
-                    openDropdown ? "rounded-t-3xl " : "rounded-3xl"
-                  } ${
-                    isDarkMode
-                      ? "bg-gray-200 text-dark-primary"
-                      : "bg-light-secondary text-white"
-                  }`}
+                  className={`flex  items-center text-sm md:text-base justify-between gap-2 px-2 md:px-4 py-1 md:py-2 pb-2 md:pb-3  rounded-t-sm
+                    bg-light-secondary text-white dark:bg-gray-200 dark:text-dark-primary `}
                   onClick={() => toggleDropdown(id)}
                 >
                   {name}
@@ -105,22 +96,17 @@ const DocumenterisFilter = ({ isDarkMode }) => {
                 {openDropdown === id && (
                   <div
                     onMouseLeave={() => toggleDropdown(null)}
-                    className={`absolute animation  w-full rounded-b-sm z-20 ${
-                      isDarkMode
-                        ? "bg-dark-secondary text-dark-primary"
-                        : "bg-light-secondary text-white"
-                    }`}
+                    className={`absolute animation  w-full rounded-b-sm z-20 bg-light-secondary text-white  dark:bg-dark-secondary dark:text-dark-primary`}
                     style={{ top: "100%", left: 0 }}
                   >
                     {dropdown.map((item) => (
                       <Link
                         key={item.id}
                         onClick={() => handleCategorySelect(item.category)}
-                        className={`block text-sm md:text-base p-2 md:px-4 md:py-3 border-t-[1px] rounded-b-sm ${
-                          isDarkMode
-                            ? "bg-dark-secondary text-dark-primary hover:bg-gray-100"
-                            : "bg-light-secondary text-white border-t-slate-600 hover:bg-[#0B1A2B]"
-                        }`}
+                        className={`block text-sm md:text-base p-2 md:px-4 md:py-3 border-t-[1px] rounded-b-sm
+                          bg-light-secondary text-white border-t-slate-600 hover:bg-[#0B1A2B]
+                          dark:bg-dark-secondary dark:text-dark-primary dark:hover:bg-gray-100
+                           `}
                       >
                         {item.name}
                       </Link>
@@ -143,16 +129,8 @@ const DocumenterisFilter = ({ isDarkMode }) => {
                     className="absolute left-0 top-0 w-full h-full object-cover transition duration-200 group-hover:scale-110"
                   />
                   <h1
-                    className={`absolute flex justify-center items-center bottom-0 left-0 right-0 p-3 font-semibold text-sm md:text-base ${
-                      isDarkMode
-                        ? "bg-dark-primary text-dark-secondary"
-                        : "bg-light-primary text-light-secondary"
-                    }`}
-                    style={{
-                      backgroundColor: isDarkMode
-                        ? "rgba(14, 32, 54, 0.5)"
-                        : "rgba(207, 207, 207, 0.8)",
-                    }}
+                    className={`absolute flex justify-center items-center bottom-0 left-0 right-0 p-3 font-semibold text-sm md:text-base
+                      bg-light-primary text-light-secondary bg-opacity-50 dark:bg-dark-primary dark:text-dark-secondary dark:bg-opacity-50`}
                   >
                     {name}
                   </h1>
@@ -168,11 +146,10 @@ const DocumenterisFilter = ({ isDarkMode }) => {
           <button
             onClick={handlePrev}
             disabled={currentPage === 1}
-            className={`border-[1px] border-opacity-50 p-1 px-3 md:p-2 md:px-4 rounded-full ${
-              isDarkMode
-                ? "text-light-primary border-light-primary "
-                : "text-dark-primary border-dark-primary "
-            } ${currentPage === 1 ? "text-gray-500 cursor-not-allowed" : ""}`}
+            className={`border-[1px] border-opacity-50 p-1 px-3 md:p-2 md:px-4 rounded-full 
+              text-dark-primary border-dark-primary dark:text-light-primary dark:border-light-primary $${
+                currentPage === 1 ? "text-gray-500 cursor-not-allowed" : ""
+              }`}
           >
             پێشتر
           </button>
@@ -184,15 +161,13 @@ const DocumenterisFilter = ({ isDarkMode }) => {
               <button
                 key={index + 1}
                 onClick={() => setCurrentPage(index + 1)}
-                className={`p-1 px-3 md:p-2 md:px-4 rounded-full border-[1px] ${
-                  isActive
-                    ? isDarkMode
-                      ? "bg-dark-secondary text-dark-primary border-dark-secondary"
-                      : "bg-light-secondary text-light-primary border-light-secondary"
-                    : isDarkMode
-                    ? "border-light-primary text-light-primary border-opacity-50"
-                    : "border-dark-primary text-dark-primary border-opacity-50"
-                }`}
+                className={`p-1 px-3 md:p-2 md:px-4 rounded-full border-[1px] 
+                  bg-light-secondary text-light-primary border-light-secondary 
+                  dark:bg-dark-secondary dark:text-dark-primary dark:border-dark-secondary  ${
+                    isActive
+                      ? "border-light-primary text-light-primary border-opacity-50"
+                      : "border-dark-primary text-dark-primary border-opacity-50"
+                  }`}
               >
                 {index + 1}
               </button>
@@ -203,15 +178,12 @@ const DocumenterisFilter = ({ isDarkMode }) => {
           <button
             onClick={handleNext}
             disabled={currentPage === totalPages}
-            className={`border-[1px] border-opacity-50 p-1 px-3 md:p-2 md:px-4 rounded-full ${
-              isDarkMode
-                ? "text-light-primary border-light-primary "
-                : "text-dark-primary border-dark-primary "
-            } ${
-              currentPage === totalPages
-                ? "text-gray-500 cursor-not-allowed"
-                : ""
-            }`}
+            className={`border-[1px] border-opacity-50 p-1 px-3 md:p-2 md:px-4 rounded-full 
+              text-dark-primary border-dark-primary dark:text-light-primary dark:border-light-primary ${
+                currentPage === totalPages
+                  ? "text-gray-500 cursor-not-allowed"
+                  : ""
+              }`}
           >
             دواتر
           </button>

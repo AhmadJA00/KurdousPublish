@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { FaChevronRight } from "react-icons/fa";
 import { documetaries } from "../data/Documetaries.js";
 
-const Description = ({ isDarkMode }) => {
+const Description = () => {
   const [openSubmenu, setOpenSubmenu] = useState(false);
   const { id } = useParams();
 
@@ -15,11 +15,8 @@ const Description = ({ isDarkMode }) => {
 
   return (
     <section
-      className={`flex flex-col min-h-screen px-2 md:px-20 pt-28 md:pt-20 w-full ${getBackgroundOpacity()} ${
-        isDarkMode
-          ? "bg-dark-primary text-dark-secondary"
-          : "bg-light-primary text-light-secondary"
-      }`}
+      className={`flex flex-col min-h-screen px-2 md:px-20 pt-28 md:pt-20 w-full ${getBackgroundOpacity()} 
+      bg-light-primary text-light-secondary dark:bg-dark-primary dark:text-dark-secondary`}
     >
       <div className="flex flex-col lg:flex-row mt-1 xl:mt-10 items-center lg:py-20">
         <div className="flex-shrink-0 md:w-1/2 lg:w-1/5 mt-10 md:mt-14 lg:mt-1">

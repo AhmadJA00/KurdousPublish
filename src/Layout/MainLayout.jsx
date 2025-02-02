@@ -2,12 +2,12 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Outlet } from "react-router-dom";
 
-const MainLayout = ({ isDarkMode, toggleTheme }) => {
+const MainLayout = () => {
   return (
     <div>
-      <Navbar isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
-      <Outlet isDarkMode={isDarkMode} />
-      <Footer isDarkMode={isDarkMode} />
+      <Navbar />
+      <Outlet />
+      <Footer />
     </div>
   );
 };

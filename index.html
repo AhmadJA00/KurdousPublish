@@ -1,11 +1,35 @@
 <!DOCTYPE html>
-<html lang="en" dir="rtl">
+<html data-mode="light" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Kurdous - Search your favorite content" />
     <meta name="robots" content="index, follow" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      // Function to apply the theme based on the provided mode
+      function toggleDarkModeLightMode() {
+        const darkLightMode = localStorage.getItem("theme");
+        const htmlElement = document.querySelector("html");
+        if (darkLightMode === "light") {
+          htmlElement.setAttribute("data-mode", "dark");
+          localStorage.setItem("theme", "dark");
+        } else {
+          localStorage.setItem("theme", "light");
+          htmlElement.setAttribute("data-mode", "light");
+        }
+      }
+
+      function init() {
+        const darkLightMode = localStorage.getItem("theme");
+        if (darkLightMode !== null && darkLightMode === "dark") {
+          const htmlElement = document.querySelector("html");
+          htmlElement.setAttribute("data-mode", "dark");
+        }
+      }
+
+      init();
+    </script>
     <title>Kurdous</title>
   </head>
   <body class="font-Rabar">

@@ -11,7 +11,7 @@ import { HiOutlineVolumeUp, HiOutlineVolumeOff } from "react-icons/hi";
 import { useParams } from "react-router-dom";
 import { documetaries } from "../data/Documetaries.js";
 
-const AnimailVideo = ({ isDarkMode }) => {
+const AnimailVideo = () => {
   const { id } = useParams(); // Retrieve the video ID from the URL
   const video = documetaries.find((video) => video.id === parseInt(id)); // Use the video ID to find the video
 
@@ -90,16 +90,11 @@ const AnimailVideo = ({ isDarkMode }) => {
 
   return (
     <section
-      className={`flex flex-col items-center justify-center min-h-screen px-4 md:px-8 w-full ${
-        isDarkMode
-          ? "bg-dark-primary text-dark-secondary"
-          : "bg-light-primary text-light-secondary"
-      }`}
+      className={`flex flex-col items-center justify-center min-h-screen px-4 md:px-8 w-full 
+        bg-light-primary text-light-secondary dark:bg-dark-primary dark:text-dark-secondary`}
     >
       <div
-        className={`relative flex flex-col-reverse lg:p-16 lg:pb-8 rounded-3xl justify-center items-center mt-48 ${
-          isDarkMode ? "bg-slate-900" : "shadow-2xl"
-        }`}
+        className={`relative flex flex-col-reverse lg:p-16 lg:pb-8 rounded-3xl justify-center items-center mt-48 shadow-2xl dark:bg-slate-900`}
       >
         {/* Background Elements */}
         <div className="absolute hidden lg:block -top-4 -left-8 w-64 h-64 rounded-full opacity-30 blur-3xl bg-dark-tertiary"></div>
@@ -110,7 +105,7 @@ const AnimailVideo = ({ isDarkMode }) => {
           <video
             ref={videoRef}
             src={video?.linkVideo} // Dynamically load video based on the ID
-            className="rounded-md"
+            className="rounded-md h-96 md:h-auto"
             width="1000px"
             onTimeUpdate={handleProgressUpdate}
           ></video>
