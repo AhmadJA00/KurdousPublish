@@ -57,7 +57,7 @@ const Hero = () => {
           </div>
           <video
             src={vid}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover "
             autoPlay
             loop
             muted
@@ -77,11 +77,7 @@ const Hero = () => {
       <div className="hidden lg:block absolute top-1/2 right-20 transform -translate-y-1/2 z-20">
         <button
           onClick={nextVideo}
-          className="xl:p-3 p-2 xl:text-xl  rounded-full bg-light-primary text-light-secondary dark:bg-dark-primary dark:text-dark-secondary "
-          style={{
-            backgroundColor:
-              "rgba(207, 207, 207, 0.8) dark:rgba(14, 32, 54, 0.8) ",
-          }}
+          className="xl:p-3 p-2 xl:text-xl rounded-full bg-light-primary text-light-secondary bg-opacity-50 dark:bg-dark-primary dark:text-dark-secondary dark:bg-opacity-50"
         >
           <FaChevronRight />
         </button>

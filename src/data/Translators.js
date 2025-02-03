@@ -1,6 +1,7 @@
 import FennecFox from "../assets/images/FennecFox.webp";
 import ArcticFox from "../assets/images/ArcticFox.webp";
 import ArcticSquirrel from "../assets/images/ArcticSquirrel.jpeg";
+import mountainGoat from "../assets/images/mountainGoat.jpeg";
 
 // Translators
 import JihadAbdulrahman from "../assets/images/JihadAbdulrahman.jpg";
@@ -34,8 +35,11 @@ export const translatorsList = [
     TranslatorName: "شەن کامل عمر",
     title: "بەرهەمە وەرگێڕدراوەکانی",
     TranslatorImage: ShanKaml,
-    number: 1,
-    AllDatas: [{ id: 1, name: "ڕێوی  فێنێک", img: FennecFox }],
+    number: 2,
+    AllDatas: [
+      { id: 1, name: "ڕێوی  فێنێک", img: FennecFox },
+      { id: 4, name: "بزنی شاخاوی", img: mountainGoat },
+    ],
   },
   {
     id: 4,
