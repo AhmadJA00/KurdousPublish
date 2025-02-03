@@ -79,12 +79,14 @@ const DocumenterisFilter = () => {
           <div className="pl-2 md:pl-8">
             <h1 className="font-bold text-xl md:text-2xl">دۆکیۆمێنتارییەکان</h1>
           </div>
-          <div className={`flex justify-between items-center relative`}>
+          <div className={`flex justify-between items-center relative `}>
             {dropdownData.map(({ id, name, dropdown }) => (
-              <div key={id} className="inline-block text-right relative">
+              <div key={id} className="inline-block text-right relative ">
                 <button
-                  className={`flex  items-center text-sm md:text-base justify-between gap-2 px-2 md:px-4 py-1 md:py-2 pb-2 md:pb-3  rounded-t-sm
-                    bg-light-secondary text-white dark:bg-gray-200 dark:text-dark-primary `}
+                  className={`flex  items-center text-sm md:text-base justify-between gap-2 px-2 md:px-4 py-1 md:py-2 pb-2 md:pb-3
+                    bg-light-secondary text-white  dark:bg-gray-200 dark:text-dark-primary ${
+                      openDropdown ? "rounded-t-3xl " : "rounded-3xl"
+                    } `}
                   onClick={() => toggleDropdown(id)}
                 >
                   {name}
