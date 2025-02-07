@@ -27,11 +27,11 @@ const Hero = () => {
   }, [currentIndex]);
 
   return (
-    <div className="relative w-full h-screen overflow-hidden z-0">
+    <div className="relative w-full h-screen overflow-hidden ">
       {videosList.map(({ id, vid, title, description, btn }, index) => (
         <div
           key={id}
-          className={`absolute inset-0 transition-opacity duration-1000 ${
+          className={`absolute inset-0 transition-opacity duration-1000 -z-10 ${
             index === currentIndex ? "opacity-100" : "opacity-0"
           }`}
         >
