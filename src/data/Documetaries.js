@@ -3,13 +3,13 @@ import FennecFox from "../assets/images/FennecFox.webp";
 import ArcticFox from "../assets/images/ArcticFox.webp";
 import ArcticSquirrel from "../assets/images/ArcticSquirrel.jpeg";
 import mountainGoat from "../assets/images/mountainGoat.jpeg";
-
+import img5 from "../assets/images/5.webp";
 
 import v1 from "../assets/videos/1.mp4";
 import v2 from "../assets/videos/2.mp4";
 import v3 from "../assets/videos/3.mp4";
 import v4 from "../assets/videos/4.mp4";
-
+import v5 from "../assets/videos/5.mp4";
 
 export const documetaries = [
   {
@@ -79,6 +79,22 @@ export const documetaries = [
       { label: "وەرگێڕ", value: "شەن کامل" },
       { label: "تەکنیکار", value: "محمود هونەر" },
       { label: "ماوە", value: "٣.١٩ خولەک" },
+    ],
+  },
+  {
+    id: 5,
+    title: "King Penguins",
+    description: "",
+    name: "شا پەنگوینەکان ",
+    img: img5,
+    category: "ژیانی ئاژەڵە کێوییەکان",
+    linkVideo: v5,
+    btn: "بینینی ڤیدیۆ",
+    metadata: [
+      { label: "زمان", value: "ئینگلیزی" },
+      { label: "وەرگێڕ", value: "بارانی سعید جرجیس" },
+      { label: "تەکنیکار", value: "محمود هونەر" },
+      { label: "ماوە", value: "٢.٢٨ خولەک" },
     ],
   },
 ];

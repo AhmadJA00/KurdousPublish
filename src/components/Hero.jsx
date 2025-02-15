@@ -27,43 +27,45 @@ const Hero = () => {
   }, [currentIndex]);
 
   return (
-    <div className="relative w-full h-screen overflow-hidden ">
-      {videosList.map(({ id, vid, title, description, btn }, index) => (
-        <div
-          key={id}
-          className={`absolute inset-0 transition-opacity duration-1000 -z-10 ${
-            index === currentIndex ? "opacity-100" : "opacity-0"
-          }`}
-        >
-          <div className="absolute top-32 2xl:top-48 xl:top-44 lg:top-44 w-full lg:w-3/4 h-full flex items-center text-center lg:text-start z-10 px-20 ">
-            <div className="text-white w-full pb-4 text-center lg:text-start">
-              <h1 className="lg:text-2xl xl:text-3xl text-xl font-bold mb-4">
-                {title}
-              </h1>
-              <p className="text-xs md:text-base text-light-primary mb-7 leading-[1.5]">
-                {description}
-              </p>
-              <Link to={`/Description/${id}`}>
-                <button className="group relative py-1 md:py-2 px-6 md:px-8 rounded-full z-10 bg-white font-medium w-44 mx-auto mb-7">
-                  <div className="circle absolute w-1/4 h-full bg-light-tertiary rounded-full right-0 z-20 top-0 group-hover:w-full duration-200">
-                    <FaChevronRight className="absolute text-primary-color top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 duration-75 group-hover:opacity-0" />
-                  </div>
-                  <div className="text-light-tertiary text-base relative z-20 transition-all group-hover:text-white">
-                    {btn}
-                  </div>
-                </button>
-              </Link>
-            </div>
-          </div>
+    <div className="relative w-full h-screen overflow-hidden">
+      {/* Background Video Slider */}
+      <div className="absolute inset-0 w-full h-full overflow-hidden">
+        {videosList.map(({ id, vid }, index) => (
           <video
+            key={id}
             src={vid}
-            className="w-full h-full object-cover "
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+              index === currentIndex ? "opacity-100" : "opacity-0"
+            }`}
             autoPlay
             loop
             muted
+            playsInline
           />
+        ))}
+      </div>
+
+      {/* Foreground Text and Button */}
+      <div className="absolute top-32 2xl:top-48 xl:top-44 lg:top-44 w-full lg:w-3/4 h-full flex items-center text-center lg:text-start z-10 px-20">
+        <div className="text-white w-full pb-4 text-center lg:text-start">
+          <h1 className="lg:text-2xl xl:text-3xl text-xl font-bold mb-4">
+            {videosList[currentIndex].title}
+          </h1>
+          <p className="text-xs md:text-base text-light-primary mb-7 leading-[1.5]">
+            {videosList[currentIndex].description}
+          </p>
+          <Link to={`/Description/${videosList[currentIndex].id}`}>
+            <button className="group relative py-1 md:py-2 px-6 md:px-8 rounded-full z-10 bg-white font-medium w-44 mx-auto mb-7">
+              <div className="circle absolute w-1/4 h-full bg-light-tertiary rounded-full right-0 z-20 top-0 group-hover:w-full duration-200">
+                <FaChevronRight className="absolute text-primary-color top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 duration-75 group-hover:opacity-0" />
+              </div>
+              <div className="text-light-tertiary text-base relative z-20 transition-all group-hover:text-white">
+                {videosList[currentIndex].btn}
+              </div>
+            </button>
+          </Link>
         </div>
-      ))}
+      </div>
 
       {/* Left and Right Navigation Buttons */}
       <div className="hidden lg:block absolute top-1/2 left-20 transform -translate-y-1/2 z-20">

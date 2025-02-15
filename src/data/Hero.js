@@ -2,6 +2,7 @@ import v1 from "../assets/videos/videoList/1.mp4";
 import v2 from "../assets/videos/videoList/2.mp4";
 import v3 from "../assets/videos/videoList/3.mp4";
 import v4 from "../assets/videos/videoList/4.mp4";
+import v5 from "../assets/videos/videoList/5.mp4";
 
 export const videosList = [
   // {
@@ -12,14 +13,14 @@ export const videosList = [
   //     "بچووکترین ڕێوەیە لەجیهاندا لەبیابانەکانی باکوری ئەفریقیا و هەندێك ناوچەی باکوری سعودیا دەژیت. ئەم ئاژەڵە لەکەشی کەم ئاوی و بێ ئاوی ڕاهاتووە، ژیانێکی هەمەچەشنیان هەیە.",
   //   btn: "زانیاری زیاتر",
   // },
-  {
-    id: 2,
-    vid: v2,
-    title: "Arctic Fox",
-    description:
-      "ڕێوی جەمسەری باکوور قاچەکانی کورتە و جەستەیەکی چڕ و گوێچکە بچووکە و پەڕەکانی زستانە ئەستوورن، ئەمەش دیمەنێکی چەقۆی پێدەبەخشێت بە بەراورد بە ڕێوی سووری کەمێک گەورەتر.",
-    btn: "زانیاری زیاتر",
-  },
+  // {
+  //   id: 2,
+  //   vid: v2,
+  //   title: "Arctic Fox",
+  //   description:
+  //     "ڕێوی جەمسەری باکوور قاچەکانی کورتە و جەستەیەکی چڕ و گوێچکە بچووکە و پەڕەکانی زستانە ئەستوورن، ئەمەش دیمەنێکی چەقۆی پێدەبەخشێت بە بەراورد بە ڕێوی سووری کەمێک گەورەتر.",
+  //   btn: "زانیاری زیاتر",
+  // },
   {
     id: 3,
     vid: v3,
@@ -34,6 +35,13 @@ export const videosList = [
     title: "male mountain goat",
     description:
       "بزن و مەڕەکان وەرزی زاوزێ کردنیان دەکەوێتە ئەو کاتانەی کە شەو درێژە و ڕۆژ کورتە، وەرزی زستان و بەهار. لەم کورتە دیۆکیۆمێنتاریە ئاماژە بە شەڕانگێزی تەگە (نێرەی بزن) دەکات.",
+    btn: "زانیاری زیاتر",
+  },
+  {
+    id: 5,
+    vid: v5,
+    title: "King Penguins",
+    description: "",
     btn: "زانیاری زیاتر",
   },
 ];

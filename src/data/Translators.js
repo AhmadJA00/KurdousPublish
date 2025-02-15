@@ -2,6 +2,7 @@ import FennecFox from "../assets/images/FennecFox.webp";
 import ArcticFox from "../assets/images/ArcticFox.webp";
 import ArcticSquirrel from "../assets/images/ArcticSquirrel.jpeg";
 import mountainGoat from "../assets/images/mountainGoat.jpeg";
+import img5 from "../assets/images/5.webp";
 
 // Translators
 import JihadAbdulrahman from "../assets/images/JihadAbdulrahman.jpg";
@@ -35,7 +36,7 @@ export const translatorsList = [
     TranslatorName: "شەن کامل عمر",
     title: "بەرهەمە وەرگێڕدراوەکانی",
     TranslatorImage: ShanKaml,
-    number: 2,
+    number: "٢",
     AllDatas: [
       { id: 1, name: "ڕێوی  فێنێک", img: FennecFox },
       { id: 4, name: "بزنی شاخاوی", img: mountainGoat },
@@ -46,9 +47,10 @@ export const translatorsList = [
     TranslatorName: "بارانی سعید جرجیس",
     title: "بەرهەمە وەرگێڕدراوەکانی",
     TranslatorImage: BaraniSahid,
-    number: 1,
+    number: "٢",
     AllDatas: [
       { id: 3, name: "سمۆرە زەمینیەکانی جەمسەری باکوور", img: ArcticSquirrel },
+      { id: 5, name: "شا پەنگوینەکان", img: img5 },
     ],
   },
   {
@@ -64,7 +66,7 @@ export const translatorsList = [
     TranslatorName: "شیلان عمر احمد",
     title: "بەرهەمە وەرگێڕدراوەکانی",
     TranslatorImage: ShilanOmer,
-    number: 1,
+    number: "١",
     AllDatas: [{ id: 2, name: "ڕێوی جەمسەری باکوور", img: ArcticFox }],
   },
   {
