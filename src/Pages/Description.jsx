@@ -37,7 +37,7 @@ const Description = () => {
               key={id}
               className="flex items-center gap-4 border-r-[1.5px] rounded-md border-dark-tertiary pr-5"
             >
-              <h1 className="font-bold text-xl">{item.label}</h1>
+              <h1 className="font-bold text-lg md:text-xl">{item.label}</h1>
               <p className="text-base opacity-80">{item.value}</p>
             </div>
           ))}

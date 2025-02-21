@@ -34,7 +34,7 @@ const TranslatorsPages = () => {
                   bg-light-primary text-light-secondary bg-opacity-50 dark:bg-dark-primary dark:text-dark-secondary dark:bg-opacity-50
                   transition-all duration-300 group-hover:bottom-0`}
               >
-                <h1 className="font-bold text-xl pt-1 text-center">
+                <h1 className="font-bold text-lg md:text-xl pt-1 text-center">
                   {TranslatorName}
                 </h1>
                 <p className=" text-center">{title}</p>
