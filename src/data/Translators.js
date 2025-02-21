@@ -3,6 +3,7 @@ import ArcticFox from "../assets/images/ArcticFox.webp";
 import ArcticSquirrel from "../assets/images/ArcticSquirrel.jpeg";
 import mountainGoat from "../assets/images/mountainGoat.jpeg";
 import img5 from "../assets/images/5.webp";
+import img6 from "../assets/images/6.webp";
 
 // Translators
 import JihadAbdulrahman from "../assets/images/JihadAbdulrahman.jpg";
@@ -28,8 +29,14 @@ export const translatorsList = [
     TranslatorName: "سۆزیار فاروق شەریف",
     title: "بەرهەمە وەرگێڕدراوەکانی",
     TranslatorImage: SozyarFaruq,
-    number: "نیە",
-    AllDatas: [],
+    number: "١",
+    AllDatas: [
+      {
+        id: 6,
+        name: "هەڵۆی فلیپینی",
+        img: img6,
+      },
+    ],
   },
   {
     id: 3,

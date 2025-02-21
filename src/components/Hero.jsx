@@ -46,7 +46,7 @@ const Hero = () => {
       </div>
 
       {/* Foreground Text and Button */}
-      <div className="absolute top-32 2xl:top-48 xl:top-44 lg:top-44 w-full lg:w-3/4 h-full flex items-center text-center lg:text-start z-10 px-20">
+      <div className="absolute top-32 2xl:top-48 xl:top-44 lg:top-44 w-full lg:w-3/4 h-full flex items-center text-center lg:text-start z-0 px-20">
         <div className="text-white w-full pb-4 text-center lg:text-start">
           <h1 className="lg:text-2xl xl:text-3xl text-xl font-bold mb-4">
             {videosList[currentIndex].title}
@@ -55,7 +55,7 @@ const Hero = () => {
             {videosList[currentIndex].description}
           </p>
           <Link to={`/Description/${videosList[currentIndex].id}`}>
-            <button className="group relative py-1 md:py-2 px-6 md:px-8 rounded-full z-10 bg-white font-medium w-44 mx-auto mb-7">
+            <button className="group relative py-1 md:py-2 px-6 md:px-8 rounded-full z-0 bg-white font-medium w-44 mx-auto mb-7">
               <div className="circle absolute w-1/4 h-full bg-light-tertiary rounded-full right-0 z-20 top-0 group-hover:w-full duration-200">
                 <FaChevronRight className="absolute text-primary-color top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 duration-75 group-hover:opacity-0" />
               </div>
