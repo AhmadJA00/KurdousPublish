@@ -9,7 +9,7 @@ const Documentaries = () => {
     >
       <div className=" flex flex-col justify-around gap-9 lg:gap-8">
         <div className="txt flex flex-col items-start mt-24">
-          <h1 className="text-yellow-color font-extrabold text-3xl">
+          <h1 className="text-light-secondary text-2xl font-semibold md:font-extrabold md:text-3xl dark:text-white">
             نوێترین ژێرنوسکراوەکان
           </h1>
         </div>

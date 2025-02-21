@@ -9,9 +9,7 @@ const Translators = () => {
     >
       <div className="flex flex-col justify-start items-center mt-24">
         <div>
-          <h1
-            className={`uppercase text-light-secondary dark:text-dark-secondaryfont-extrabold text-3xl group relative cursor-pointer`}
-          >
+          <h1 className="text-light-secondary text-2xl font-semibold md:font-extrabold md:text-3xl dark:text-white">
             وەرگێڕەکان
           </h1>
         </div>
